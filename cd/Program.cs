@@ -20,20 +20,42 @@ internal class Program {
 
 
     private static int CountDuplicates(int jack, int jill) {
-        var initialCapacity = Math.Min(jack, jill);
-        var set = new HashSet<long>(initialCapacity);
-        var numDuplicates = 0;
+        var capacity = Math.Max(jack, jill);
+        var set = new HashSet<int>(capacity);
+        int numDuplicates = 0;
 
-        for (var i = 0; i < jack; i++) {
-            var line = Console.ReadLine();
-            set.Add(long.Parse(line));
+        for (int i = 0; i < jack + jill; i++) {
+            var item = Console.ReadLine();
+            var num = int.Parse(item);
+            if (!set.Add(num)) {
+                numDuplicates++;
+            }
         }
 
-        for (var i = 0; i < jill; i++) {
-            var line = Console.ReadLine();
-            if (set.Contains(long.Parse(line))) numDuplicates++;
-        }
-
-        return numDuplicates;
+        return numDuplicates; 
     }
+    
+
 }
+
+
+//
+//
+// private static int CountDuplicates(int jack, int jill) {
+//     var initialCapacity = Math.Min(jack, jill);
+//     var set = new HashSet<long>(initialCapacity);
+//     var numDuplicates = 0;
+//
+//     for (var i = 0; i < jack; i++) {
+//         var line = Console.ReadLine();
+//         set.Add(long.Parse(line));
+//     }
+//
+//     for (var i = 0; i < jill; i++) {
+//         var line = Console.ReadLine();
+//         if (set.Contains(long.Parse(line))) numDuplicates++;
+//     }
+//
+//     return numDuplicates;
+// }
+//

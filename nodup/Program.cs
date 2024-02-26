@@ -7,11 +7,10 @@ namespace nodup;
 class Program {
     static void Main(string[] args) {
         var input = Console.ReadLine();
-        var wordArray = input.Split(' ');
+        var wordArray = input?.Split(' ') ?? Array.Empty<string>();
+        
         var wordSet = new HashSet<string>(wordArray);
-        
         var message = wordArray.Length == wordSet.Count ? "yes" : "no";
-        
         Console.WriteLine(message);
 
         

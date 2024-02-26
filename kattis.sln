@@ -22,6 +22,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3dprinter", "3dprinter\3dpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guessthedatastructure", "guessthedatastructure\guessthedatastructure.csproj", "{A72BF5F9-E075-4DD4-957C-E9EB7E3F85D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kattisquest", "kattisquest\kattisquest.csproj", "{69E81889-AE54-43E7-A9BC-213F1CA4B749}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -72,5 +74,9 @@ Global
 		{A72BF5F9-E075-4DD4-957C-E9EB7E3F85D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A72BF5F9-E075-4DD4-957C-E9EB7E3F85D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A72BF5F9-E075-4DD4-957C-E9EB7E3F85D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69E81889-AE54-43E7-A9BC-213F1CA4B749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E81889-AE54-43E7-A9BC-213F1CA4B749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E81889-AE54-43E7-A9BC-213F1CA4B749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E81889-AE54-43E7-A9BC-213F1CA4B749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

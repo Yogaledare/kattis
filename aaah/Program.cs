@@ -7,7 +7,10 @@ class Program {
         var jon = Console.ReadLine();
         var doc = Console.ReadLine();
 
-        var message = jon.Length >= doc.Length ? "go" : "no";
+        var jonLength = jon?.Length ?? 0;
+        var docLength = doc?.Length ?? 0; 
+
+        var message = jonLength >= docLength ? "go" : "no";
 
         Console.WriteLine(message);
     }

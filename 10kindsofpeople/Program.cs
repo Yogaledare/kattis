@@ -82,14 +82,13 @@ class Program {
             }
         }
 
-
         return output;
     }
 
 
     private static Dictionary<NodeId, int> IdentifyClusters(bool[,] map) {
         Dictionary<NodeId, int> output = new Dictionary<NodeId, int>();
-        int id = 0;
+        int clusterId = 0;
         HashSet<NodeId> visited = new HashSet<NodeId>();
         // var preComputedNeighbours = PreComputeAllNeighbors(map);
         var preComputedNeighbours = new Dictionary<NodeId, List<NodeId>>();
@@ -105,10 +104,10 @@ class Program {
                 var cluster = FindClusterWithBfs(current, map, preComputedNeighbours, visited);
 
                 foreach (var node in cluster) {
-                    output.Add(node, id);
+                    output.Add(node, clusterId);
                 }
 
-                id++;
+                clusterId++;
                 visited.UnionWith(cluster);
             }
         }

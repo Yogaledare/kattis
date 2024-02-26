@@ -25,7 +25,7 @@ class Program {
 
         for (int i = 0; i < numLines; i++) {
             var read = Console.ReadLine();
-            var tokens = read.Split(' ');
+            var tokens = read?.Split(' ') ?? Array.Empty<string>();
             var type = int.Parse(tokens[0]);
             var value = int.Parse(tokens[1]);
 
@@ -89,11 +89,6 @@ class Program {
         StructureType StructureType { get; }
         void Add(int item);
         void RemoveAndMatch(int item);
-    }
-
-
-    private interface IOperation {
-        public void Perform(IStructure iStructure);
     }
 
 
@@ -188,6 +183,11 @@ class Program {
     }
 
 
+    private interface IOperation {
+        public void Perform(IStructure iStructure);
+    }
+
+
     private class AddOperation : IOperation {
         private readonly int value;
 
@@ -213,4 +213,3 @@ class Program {
         }
     }
 }
-

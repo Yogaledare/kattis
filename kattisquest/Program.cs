@@ -59,7 +59,11 @@ class Program {
                 return new Node(e, g);
             }
 
-            if (e < node.E) {
+            if (e < 0) {
+                return node; 
+            }
+
+            else if (e < node.E) {
                 node.Left = Insert(node.Left, e, g);
                 // node.Left.Parent = node;
             }
@@ -68,8 +72,7 @@ class Program {
                 node.Right = Insert(node.Right, e, g);
                 // node.Right.Parent = node;
             }
-
-            else {
+            else if (e == node.E) {
                 node.GHeap.Enqueue(g, g);
                 return node;
             }
